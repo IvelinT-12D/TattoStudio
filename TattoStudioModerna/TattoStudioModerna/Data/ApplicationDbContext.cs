@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using TattoStudioModerna.Data;
 
 namespace TattoStudioModerna.Data
 {
@@ -14,6 +15,7 @@ namespace TattoStudioModerna.Data
         }
        public DbSet<Employee> Employees { get; set; }
        public DbSet<Tatto> Tatto { get; set; }
+       public DbSet<TattoStudioModerna.Data.Order> Order { get; set; }
         
     }
 }

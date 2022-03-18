@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TattoStudioModerna.Data;
 
-namespace TattoStudioModerna.Data.Migrations
+namespace TattoStudioModerna.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220313180555_Tatto1")]
-    partial class Tatto1
+    [Migration("20220317144909_TattoDb")]
+    partial class TattoDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -164,9 +164,6 @@ namespace TattoStudioModerna.Data.Migrations
                     b.Property<string>("Discription")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EmployeeId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
@@ -183,8 +180,6 @@ namespace TattoStudioModerna.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("EmployeeId");
 
                     b.ToTable("Employees");
                 });
@@ -247,12 +242,7 @@ namespace TattoStudioModerna.Data.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int?>("TattoId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("TattoId");
 
                     b.ToTable("Tatto");
                 });
@@ -379,21 +369,14 @@ namespace TattoStudioModerna.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("TattoStudioModerna.Data.Employee", b =>
-                {
-                    b.HasOne("TattoStudioModerna.Data.Employee", null)
-                        .WithMany("Employees")
-                        .HasForeignKey("EmployeeId");
-                });
-
             modelBuilder.Entity("TattoStudioModerna.Data.Order", b =>
                 {
                     b.HasOne("TattoStudioModerna.Data.Employee", "Employee")
-                        .WithMany()
+                        .WithMany("Orders")
                         .HasForeignKey("EmployeeId1");
 
                     b.HasOne("TattoStudioModerna.Data.Tatto", "Tatto")
-                        .WithMany()
+                        .WithMany("Orders")
                         .HasForeignKey("TattoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -409,21 +392,14 @@ namespace TattoStudioModerna.Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("TattoStudioModerna.Data.Tatto", b =>
-                {
-                    b.HasOne("TattoStudioModerna.Data.Tatto", null)
-                        .WithMany("Tattos")
-                        .HasForeignKey("TattoId");
-                });
-
             modelBuilder.Entity("TattoStudioModerna.Data.Employee", b =>
                 {
-                    b.Navigation("Employees");
+                    b.Navigation("Orders");
                 });
 
             modelBuilder.Entity("TattoStudioModerna.Data.Tatto", b =>
                 {
-                    b.Navigation("Tattos");
+                    b.Navigation("Orders");
                 });
 
             modelBuilder.Entity("TattoStudioModerna.Data.User", b =>

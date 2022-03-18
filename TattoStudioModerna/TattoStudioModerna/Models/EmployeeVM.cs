@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TattoStudioModerna.Data
+namespace TattoStudioModerna.Models
 {
-    public class Employee 
+    public class EmployeeVM
     {
         public string Id { get; set; }
         public string FirstName { get; set; }
@@ -14,6 +14,6 @@ namespace TattoStudioModerna.Data
         public int Phone { get; set; }
         public string TattoCertifcate { get; set; }
         public string Discription { get; set; }
-        public ICollection<Order> Orders { get; set; }
+        
     }
 }

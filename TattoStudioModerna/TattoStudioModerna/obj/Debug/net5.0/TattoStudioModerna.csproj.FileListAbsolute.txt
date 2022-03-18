@@ -51,7 +51,6 @@ E:\VS Work\TattoStudioModerna\TattoStudioModerna\bin\Debug\net5.0\runtimes\win-x
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\TattoStudioModerna.csproj.AssemblyReference.cache
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\TattoStudioModerna.GeneratedMSBuildEditorConfig.editorconfig
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\TattoStudioModerna.AssemblyInfoInputs.cache
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\TattoStudioModerna.AssemblyInfo.cs
@@ -172,3 +171,10 @@ E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Views\Or
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Views\Orders\Details.cshtml.g.cs
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Views\Orders\Edit.cshtml.g.cs
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Views\Orders\Index.cshtml.g.cs
+E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\TattoStudioModerna.csproj.AssemblyReference.cache
+E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs

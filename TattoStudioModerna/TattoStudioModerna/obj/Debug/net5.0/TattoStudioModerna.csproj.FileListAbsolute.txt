@@ -171,10 +171,10 @@ E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Views\Or
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Views\Orders\Details.cshtml.g.cs
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Views\Orders\Edit.cshtml.g.cs
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Views\Orders\Index.cshtml.g.cs
-E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\TattoStudioModerna.csproj.AssemblyReference.cache
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+E:\VS Work\TattoStudioModerna\TattoStudioModerna\obj\Debug\net5.0\TattoStudioModerna.csproj.AssemblyReference.cache

@@ -15,7 +15,7 @@ namespace TattoStudioModerna.Data
         }
        public DbSet<Employee> Employees { get; set; }
        public DbSet<Tatto> Tatto { get; set; }
-       public DbSet<TattoStudioModerna.Data.Order> Order { get; set; }
+       public DbSet<Order> Order { get; set; }
         
     }
 }

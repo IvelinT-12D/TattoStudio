@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TattoStudioModerna.Data;
 
+
 namespace TattoStudioModerna.Controllers
 {
     public class TattoesController : Controller
@@ -45,6 +46,7 @@ namespace TattoStudioModerna.Controllers
         // GET: Tattoes/Create
         public IActionResult Create()
         {
+            
             return View();
         }
 

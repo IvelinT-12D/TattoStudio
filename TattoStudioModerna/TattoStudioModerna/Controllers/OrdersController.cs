@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TattoStudioModerna.Data;
+using TattoStudioModerna.Models;
 
 namespace TattoStudioModerna.Controllers
 {
@@ -45,10 +47,17 @@ namespace TattoStudioModerna.Controllers
         }
 
         // GET: Orders/Create
+        [Authorize(Roles = "User , Admin")]
         public IActionResult Create()
         {
-            ViewData["TattoId"] = new SelectList(_context.Tatto, "Id", "Id");
-            return View();
+            //OrdersVM model = new OrdersVM();
+            //model.UserId = userManager.GetUserId(User);
+            //model.TattoId = _context.Tatto.Select(x => new SelectListItem);
+            //{
+            //    Text = x.Name
+            //}
+           ViewData["TattoId"] = new SelectList(_context.Tatto, "Id", "Id");
+           return View();
         }
 
         // POST: Orders/Create

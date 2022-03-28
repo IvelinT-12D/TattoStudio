@@ -5,5 +5,5 @@ using System.Threading.Tasks;
 
 namespace TattoStudioModerna.Data
 {
-    public enum Roles { User, Admin }
+    public enum Roles { User, Admin , Employeer }
 }

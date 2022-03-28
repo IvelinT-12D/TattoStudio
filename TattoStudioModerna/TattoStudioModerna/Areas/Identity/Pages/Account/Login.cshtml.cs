@@ -53,6 +53,8 @@ namespace TattoStudioModerna.Areas.Identity.Pages.Account
 
             [Display(Name = "Remember me?")]
             public bool RememberMe { get; set; }
+            public string FullName { get; internal set; }
+            public string UserName { get; internal set; }
         }
 
         public async Task OnGetAsync(string returnUrl = null)
@@ -80,6 +82,12 @@ namespace TattoStudioModerna.Areas.Identity.Pages.Account
         
             if (ModelState.IsValid)
             {
+                User user = new User
+                {
+                    UserName = Input.UserName,
+                    Email = Input.Email,
+                    FullName = Input.FullName
+                };
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);

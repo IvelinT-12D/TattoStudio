@@ -1,45 +1,42 @@
 ﻿@model TattoStudioModerna.Data.Order
 
+
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Премахване на татуировка";
 }
 
-<h1>Delete</h1>
+<h1>Премахване на татуировка</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Сигурен ли сте, че искате да изтриете татуировката?</h3>
 <div>
-    <h4>Order</h4>
+    @*<h4>Order</h4>*@
     <hr />
     <dl class="row">
-        @*<dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.EmployeeId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.EmployeeId)
-        </dd>*@
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.User)
+            @*@Html.DisplayNameFor(model => model.UserId)*@
+            <a>Име на клиент</a>
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.User.FullName)
+            @Html.DisplayFor(model => model.User.UserName)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Tatto)
+            @*@Html.DisplayNameFor(model => model.Tatto)*@
+            <a>Име на татуировка</a>
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Tatto.Name)
         </dd class>
-        <dt class = "col-sm-2">
+        @*<dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.OrderOn)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.OrderOn)
-        </dd>
+        </dd>*@
     </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Изтриване" class="btn btn-danger" /> |
+        <a asp-action="Index">Назад</a>
     </form>
 </div>

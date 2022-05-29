@@ -60,6 +60,7 @@ namespace TattoStudioModerna.Controllers
         {
             if (ModelState.IsValid)
             {
+                tatto.Date = DateTime.Now;
                 _context.Add(tatto);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -97,6 +98,7 @@ namespace TattoStudioModerna.Controllers
 
             if (ModelState.IsValid)
             {
+                
                 try
                 {
                     _context.Update(tatto);

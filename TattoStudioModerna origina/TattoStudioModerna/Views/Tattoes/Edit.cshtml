@@ -1,12 +1,12 @@
 ﻿@model TattoStudioModerna.Data.Tatto
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Промяна на татуировка";
 }
 
-<h1>Edit</h1>
+<h1>Редактиране на татуировка</h1>
 
-<h4>Tatto</h4>
+@*<h4>Tatto</h4>*@
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,39 +14,39 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
+                <label asp-for="Name" class="control-label">Име на татуировка</label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Image" class="control-label"></label>
+                <label asp-for="Image" class="control-label">Снимка</label>
                 <input asp-for="Image" class="form-control" />
                 <span asp-validation-for="Image" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Discription" class="control-label"></label>
+                <label asp-for="Discription" class="control-label">Описание</label>
                 <input asp-for="Discription" class="form-control" />
                 <span asp-validation-for="Discription" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
+                <label asp-for="Price" class="control-label">Цена</label>
                 <input asp-for="Price" class="form-control" />
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="Date" class="control-label"></label>
                 <input asp-for="Date" class="form-control" />
                 <span asp-validation-for="Date" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Запази" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Назад</a>
 </div>
 
 @section Scripts {

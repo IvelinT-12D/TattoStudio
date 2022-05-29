@@ -3,65 +3,74 @@
 
 
 @{
-    ViewData["Title"] = "Tatto";
+    ViewData["Title"] = "Галерия";
 }
 
-<h1>Index</h1>
+<h1>Галерия</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create">Добавяне на татуировка</a>
+    </p>}
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @*//@Html.DisplayNameFor(model => model.Name)*@
+                <a>Име на татуировка</a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Image)
+                @*@Html.DisplayNameFor(model => model.Image)*@
+                <a>Снимка</a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Discription)
+                @*@Html.DisplayNameFor(model => model.Discription)*@
+                <a>Описание</a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @*@Html.DisplayNameFor(model => model.Price)*@
+                <a>Цена</a>
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Date)
-            </th>
+            <!--<th>-->
+            @*@Html.DisplayNameFor(model => model.Date)*@
+            <!--<a>Дата на добавяне</a>
+            </th>-->
             <th></th>
-            
+
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Image)
-            </td>
-               
-            <td>
-                @Html.DisplayFor(modelItem => item.Discription)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
 
-                @if (User.IsInRole("Admin"))
-                {<a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id"> Delete </a>}
+                    <img src='@Html.DisplayFor(modelItem => item.Image)' width="100" />
+                </td>
 
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
-                <a asp-controller="Orders" asp-action="Create">Buy</a>
-            </td>
-        </tr>
-}
+                <td>
+                    @Html.DisplayFor(modelItem => item.Discription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price) <a>лв.</a>
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>*@
+                <td>
+                    @if (User.IsInRole("Admin"))
+                    {
+                     <a asp-action="Edit" asp-route-id="@item.Id">Редактиране</a>
+                     <a asp-action="Delete" asp-route-id="@item.Id">Изтрий</a>
+                     }
+                     <a asp-action="Details" asp-route-id="@item.Id">Описание</a>
+                     <a asp-controller="Orders" asp-action="Create" asp-route-id="@item.Id">Купи</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

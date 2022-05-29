@@ -1,45 +1,40 @@
-﻿@model TattoStudioModerna.Data.Order
+﻿@model TattoStudioModerna.Models.OrderVM
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Направи поръчка";
 }
 
-<h1>Create</h1>
+<h1>Направи поръчка</h1>
 
-<h4>Order</h4>
+@*<h4>Order</h4>*@
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Employee" class="control-label"></label>
-                <input asp-for="Employee" class="form-control" />
-                <span asp-validation-for="Employee" class="text-danger"></span>
-            </div>
             @*<div class="form-group">
-                <label asp-for="User.UserName" class="control-label"></label>
-                <input asp-for="User.UserName" class="form-control" />
-                <span asp-validation-for="User.UserName" class="text-danger"></span>
+                <label asp-for="UserId" class="control-label"></label>
+                <input asp-for="UserId" class="form-control" />
+                <span asp-validation-for="UserId" class="text-danger"></span>
             </div>*@
             <div class="form-group">
-                <label asp-for="TattoId" class="control-label"></label>
-                <select asp-for="TattoId" class="form-control" asp-items="ViewBag.TattoId"></select>
+                <label asp-for="TattoId" class="control-label">Име на татуировката</label>
+                <select asp-for="TattoId" class ="form-control" asp-items="ViewBag.TattoId"></select>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="OrderOn" class="control-label"></label>
                 <input asp-for="OrderOn" class="form-control" />
                 <span asp-validation-for="OrderOn" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Купи" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Назад</a>
 </div>
 
 @section Scripts {

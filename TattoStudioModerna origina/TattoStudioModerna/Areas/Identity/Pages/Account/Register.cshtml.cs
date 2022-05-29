@@ -19,7 +19,7 @@ namespace TattoStudioModerna.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class RegisterModel : PageModel
-    {
+    { 
         private readonly SignInManager<User> _signInManager;
         private readonly UserManager<User> _userManager;
         private readonly ILogger<RegisterModel> _logger;
@@ -81,7 +81,7 @@ namespace TattoStudioModerna.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
               
-                var user = new User { UserName = Input.UserName, Email = Input.Email  };
+                var user = new User { UserName = Input.UserName, Email = Input.Email , Role = Roles.User  };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

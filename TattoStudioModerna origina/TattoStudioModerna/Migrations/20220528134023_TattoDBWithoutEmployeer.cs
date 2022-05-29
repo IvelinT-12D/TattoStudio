@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TattoStudioModerna.Migrations
 {
-    public partial class InitialTattoDb : Migration
+    public partial class TattoDBWithoutEmployeer : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -52,7 +52,8 @@ namespace TattoStudioModerna.Migrations
                 name: "Employees",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SecondName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -194,10 +195,7 @@ namespace TattoStudioModerna.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    EmployeeId = table.Column<int>(type: "int", nullable: false),
-                    EmployeeId1 = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    UserId1 = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     TattoId = table.Column<int>(type: "int", nullable: false),
                     OrderOn = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -205,19 +203,32 @@ namespace TattoStudioModerna.Migrations
                 {
                     table.PrimaryKey("PK_Order", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Order_AspNetUsers_UserId1",
-                        column: x => x.UserId1,
+                        name: "FK_Order_AspNetUsers_UserId",
+                        column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Order_Employees_EmployeeId1",
-                        column: x => x.EmployeeId1,
-                        principalTable: "Employees",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
                         name: "FK_Order_Tatto_TattoId",
+                        column: x => x.TattoId,
+                        principalTable: "Tatto",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TattoImage",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ImagePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TattoId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TattoImage", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_TattoImage_Tatto_TattoId",
                         column: x => x.TattoId,
                         principalTable: "Tatto",
                         principalColumn: "Id",
@@ -264,19 +275,19 @@ namespace TattoStudioModerna.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Order_EmployeeId1",
-                table: "Order",
-                column: "EmployeeId1");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Order_TattoId",
                 table: "Order",
                 column: "TattoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Order_UserId1",
+                name: "IX_Order_UserId",
                 table: "Order",
-                column: "UserId1");
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TattoImage_TattoId",
+                table: "TattoImage",
+                column: "TattoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -297,16 +308,19 @@ namespace TattoStudioModerna.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Employees");
+
+            migrationBuilder.DropTable(
                 name: "Order");
+
+            migrationBuilder.DropTable(
+                name: "TattoImage");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "Employees");
 
             migrationBuilder.DropTable(
                 name: "Tatto");

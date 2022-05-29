@@ -9,18 +9,18 @@
                         <form asp-action="Create">
                             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                             <div class="form-group">
-                                <label asp-for="Name" class="control-label"></label>
+                                <label asp-for="Name" class="control-label">Име на татуировката</label>
                                 <input asp-for="Name" class="form-control" />
                                 <span asp-validation-for="Name" class="text-danger"></span>
                             </div>
 
                             <div class="form-group">
-                                <label asp-for="Discription" class="control-label"></label>
+                                <label asp-for="Discription" class="control-label">Описание</label>
                                 <input asp-for="Discription" class="form-control" />
                                 <span asp-validation-for="Discription" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label asp-for="Price" class="control-label"></label>
+                                <label asp-for="Price" class="control-label">Цена</label>
                                 <input asp-for="Price" class="form-control" />
                                 <span asp-validation-for="Price" class="text-danger"></span>
                             </div>
@@ -29,20 +29,20 @@
                                 <input asp-for="TattoImages" class="form-control-file" multiple />
                                 <span asp-validation-for="TattoImages" class="text-danger"></span>
                             </div>
-                            <div class="form-group">
-                                <label asp-for="Date" class="control-label"></label>
+                            @*<div class="form-group">
+                                <label asp-for="Date" class="control-label">Дата на добавяне</label>
                                 <input asp-for="Date" class="form-control" />
                                 <span asp-validation-for="Date" class="text-danger"></span>
-                            </div>
+                            </div>*@
                             <div class="form-group">
-                                <input type="submit" value="Create" class="btn btn-primary" />
+                                <input type="submit" value="Добави" class="btn btn-primary"/>
                             </div>
                         </form>
                     </div>
                 </div>
 
                 <div>
-                    <a asp-action="Index">Back to List</a>
+                    <a asp-action="Index">Назад</a>
                 </div>
             
             @section Scripts {

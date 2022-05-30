@@ -17,8 +17,7 @@ namespace TattoStudioModerna.Models
         [Display(Name = "Дата на закупуване: ")]
         public DateTime OrderOn { get; set; }
 
-        //public int EmployeeId { get; set; }
-        //public List<SelectListItem> Employee { get; set; }
+        
 
 
 

@@ -15,6 +15,6 @@ namespace TattoStudioModerna.Data
         public int Phone { get; set; }
         public string TattoCertifcate { get; set; }
         public string Discription { get; set; }
-        //public ICollection<Order> Orders { get; set; }
+      
     }
 }

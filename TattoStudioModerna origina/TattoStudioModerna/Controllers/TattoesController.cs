@@ -20,13 +20,11 @@ namespace TattoStudioModerna.Controllers
         }
         
 
-        // GET: Tattoes
         public async Task<IActionResult> Index()
         {
             return View(await _context.Tatto.ToListAsync());
         }
 
-        // GET: Tattoes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -44,16 +42,13 @@ namespace TattoStudioModerna.Controllers
             return View(tatto);
         }
 
-        // GET: Tattoes/Create
         public IActionResult Create()
         {
             
             return View();
         }
 
-        // POST: Tattoes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+      
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Image,Discription,Price,Date")] Tatto tatto)
@@ -68,7 +63,7 @@ namespace TattoStudioModerna.Controllers
             return View(tatto);
         }
 
-        // GET: Tattoes/Edit/5
+       
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -84,9 +79,7 @@ namespace TattoStudioModerna.Controllers
             return View(tatto);
         }
 
-        // POST: Tattoes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+   
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Image,Discription,Price,Date")] Tatto tatto)
@@ -120,7 +113,7 @@ namespace TattoStudioModerna.Controllers
             return View(tatto);
         }
 
-        // GET: Tattoes/Delete/5
+ 
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -138,7 +131,7 @@ namespace TattoStudioModerna.Controllers
             return View(tatto);
         }
 
-        // POST: Tattoes/Delete/5
+       
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

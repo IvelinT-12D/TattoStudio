@@ -17,9 +17,9 @@ namespace TattoStudioModerna.Data
         [Required]
         public string ImagePath { get; set; }
 
-        //wrazka M:1
+      
         [Required]
-        //[ForeignKey("Product")]
+      
         public int TattoId { get; set; }
 
         public Tatto Tatto { get; set; }

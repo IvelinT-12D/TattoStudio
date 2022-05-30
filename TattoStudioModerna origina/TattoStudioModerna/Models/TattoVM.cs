@@ -15,7 +15,7 @@ namespace TattoStudioModerna.Models
         public string Image { get; set; }
         public string Discription { get; set; }
         public decimal Price { get; set; }
-
+  
         public List<SelectListItem> Categories { get; set; }
         [Required(ErrorMessage = "This field is required")]
         [DataType(DataType.DateTime)]

@@ -3,48 +3,55 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Запазени часове</h1>
-@if (User.IsInRole("Admin")) { 
-<p>
-    <a asp-action="Create">Добавяне на резервация</a>
-</p>}
-<table class="table">
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/styles.css" />
+<h1 style="color:wheat">Запазени часове</h1>
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create">Добавяне на резервация</a>
+    </p>}
+<table style="background: rgba(255,255,255,0.6);" class="table table-bordered table-striped table-hover">
     <thead>
         <tr>
-            @*<th>
-                @Html.DisplayNameFor(model => model.UserId)
-            </th>*@
-            <th>
-                @*@Html.DisplayNameFor(model => model.Tatto)*@
-                <a>Име на татуировка</a>
+            <th style="text-align:center">
+                Име на татуировка
             </th>
-            <th>
-                @*@Html.DisplayNameFor(model => model.OrderOn)*@
-                <a>Запазена на</a>
+            @if (User.IsInRole("Admin"))
+            {
+                <th style="text-align:center">
+                   Имена на поръчители
+                </th>
+            }
+            <th style="text-align:center">
+                Запазена на
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.UserId)
-            </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.Tatto.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderOn)
-            </td>
-            <td>
-                @if (User.IsInRole("Admin")) { 
-                <a asp-action="Edit" asp-route-id="@item.Id">Редактиране</a> 
-                <a asp-action="Delete" asp-route-id="@item.Id">Изтриване</a>}
-                <a asp-action="Details" asp-route-id="@item.Id">Описание</a> 
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tatto.Name)
+                </td>
+                @if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.UserName)
+                    </td>
+                }
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderOn)
+                </td>
+                <td>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a class="btn badge-secondary" asp-action="Edit" asp-route-id="@item.Id">Редактиране</a>
+                        <a class="btn badge-danger" asp-action="Delete" asp-route-id="@item.Id">Изтриване</a>}
+                    <a class="btn badge-info" asp-action="Details" asp-route-id="@item.Id">Описание</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

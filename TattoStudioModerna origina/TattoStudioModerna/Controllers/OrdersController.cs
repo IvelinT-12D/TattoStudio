@@ -30,6 +30,7 @@ namespace TattoStudioModerna.Controllers
         //    var applicationDbContext = _context.Order.Include(o => o.Tatto);
         //    return View(await applicationDbContext.ToListAsync());
         //}
+        
         public async Task<IActionResult> Index()//GetMyOrders()
         {
             if (User.IsInRole("Admin"))

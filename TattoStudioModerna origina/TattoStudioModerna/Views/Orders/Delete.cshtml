@@ -5,38 +5,29 @@
     ViewData["Title"] = "Премахване на татуировка";
 }
 
-<h1>Премахване на татуировка</h1>
+<h1 style="color:wheat">Премахване на татуировка</h1>
 
-<h3>Сигурен ли сте, че искате да изтриете татуировката?</h3>
-<div>
-    @*<h4>Order</h4>*@
+<h3 style="color:wheat">Сигурен ли сте, че искате да изтриете татуировката?</h3>
+<div style="color:wheat">
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @*@Html.DisplayNameFor(model => model.UserId)*@
             <a>Име на клиент</a>
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.User.UserName)
         </dd>
         <dt class = "col-sm-2">
-            @*@Html.DisplayNameFor(model => model.Tatto)*@
             <a>Име на татуировка</a>
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Tatto.Name)
         </dd class>
-        @*<dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.OrderOn)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.OrderOn)
-        </dd>*@
     </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Изтриване" class="btn btn-danger" /> |
-        <a asp-action="Index">Назад</a>
+        <input type="submit" value="Изтриване" class="btn btn-danger" /> 
+        <a class="btn btn-dark" asp-action="Index">Назад</a>
     </form>
 </div>

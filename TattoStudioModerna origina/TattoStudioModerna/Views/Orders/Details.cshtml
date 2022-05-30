@@ -4,28 +4,24 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Информация за татуировка</h1>
+<h1 style="color:wheat">Информация за татуировка</h1>
 
-<div>
-    @*<h4>Order</h4>*@
+<div style="color:wheat">
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @*@Html.DisplayNameFor(model => model.User.UserName)*@
             <a>Име на клиент</a>
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.User.UserName)
         </dd>
         <dt class = "col-sm-2">
-            @*@Html.DisplayNameFor(model => model.Tatto)*@
             <a>Име на татуировка</a>
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Tatto.Name)
         </dd>
         <dt class = "col-sm-2">
-            @*@Html.DisplayNameFor(model => model.OrderOn)*@
             <a>Запазена на</a>
         </dt>
         <dd class = "col-sm-10">
@@ -34,6 +30,6 @@
     </dl>
 </div>
 <div> @if (User.IsInRole("Admin")) { 
-    <a asp-action="Edit" asp-route-id="@Model.Id">Редактиране</a> }
-    <a asp-action="Index">Назад</a>
+    <a class="btn badge-secondary" asp-action="Edit" asp-route-id="@Model.Id">Редактиране</a> }
+    <a class="btn btn-dark" asp-action="Index">Назад</a>
 </div>

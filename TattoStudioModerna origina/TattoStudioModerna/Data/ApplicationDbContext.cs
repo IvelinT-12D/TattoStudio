@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TattoStudioModerna.Data;
+using TattoStudioModerna.Models;
 
 namespace TattoStudioModerna.Data
 {
@@ -16,6 +17,7 @@ namespace TattoStudioModerna.Data
        public DbSet<Employee> Employees { get; set; }
        public DbSet<Tatto> Tatto { get; set; }
        public DbSet<Order> Order { get; set; }
+      
         
     }
 }

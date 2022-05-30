@@ -6,38 +6,27 @@
     ViewData["Title"] = "Галерия";
 }
 
-<h1>Галерия</h1>
+<h1 style="color:wheat">Галерия</h1>
 
 @if (User.IsInRole("Admin"))
 {
     <p>
         <a asp-action="Create">Добавяне на татуировка</a>
     </p>}
-<table class="table">
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/styles.css" />
+<table style="background: rgba(255,255,255,0.6);" class="table table-bordered table-striped table-hover">
     <thead>
         <tr>
-            <th>
-                @*//@Html.DisplayNameFor(model => model.Name)*@
-                <a>Име на татуировка</a>
+            <th style="text-align:center">
+                Име на татуировка
             </th>
-            <th>
-                @*@Html.DisplayNameFor(model => model.Image)*@
-                <a>Снимка</a>
+            
+            <th style="text-align:center">
+                Снимка
             </th>
-            <th>
-                @*@Html.DisplayNameFor(model => model.Discription)*@
-                <a>Описание</a>
+            <th style="text-align:center">
+                Цена
             </th>
-            <th>
-                @*@Html.DisplayNameFor(model => model.Price)*@
-                <a>Цена</a>
-            </th>
-            <!--<th>-->
-            @*@Html.DisplayNameFor(model => model.Date)*@
-            <!--<a>Дата на добавяне</a>
-            </th>-->
-            <th></th>
-
         </tr>
     </thead>
     <tbody>
@@ -51,24 +40,17 @@
 
                     <img src='@Html.DisplayFor(modelItem => item.Image)' width="100" />
                 </td>
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.Discription)
-                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Price) <a>лв.</a>
                 </td>
-                @*<td>
-                        @Html.DisplayFor(modelItem => item.Date)
-                    </td>*@
                 <td>
                     @if (User.IsInRole("Admin"))
                     {
-                     <a asp-action="Edit" asp-route-id="@item.Id">Редактиране</a>
-                     <a asp-action="Delete" asp-route-id="@item.Id">Изтрий</a>
-                     }
-                     <a asp-action="Details" asp-route-id="@item.Id">Описание</a>
-                     <a asp-controller="Orders" asp-action="Create" asp-route-id="@item.Id">Купи</a>
+                        <a class="btn btn-secondary" asp-action="Edit" asp-route-id="@item.Id">Редактиране</a>
+                        <a class="btn btn-danger " asp-action="Delete" asp-route-id="@item.Id">Изтрий</a>
+                    }
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Описание</a>
+                    <a class="btn btn-success" asp-controller="Orders" asp-action="Create" asp-route-id="@item.Id">Купи</a>
                 </td>
             </tr>
         }

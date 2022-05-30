@@ -6,8 +6,15 @@
     <title>@ViewData["Title"] - TattoStudioModerna</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+ 
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/styles.css" />
+  
+   
+
+
 </head>
 <body>
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
             <div class="container">
@@ -27,10 +34,10 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Tattoes" asp-action="Index">Галерия</a>
                         </li>
-                       
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
+
             </div>
         </nav>
     </header>
@@ -40,9 +47,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy;<a asp-area="" asp-controller="Home" asp-action="Privacy">2022 - Студио за Татуировки "Модерна"</a>
+    <footer class="border-top-0 footer text-muted">
+        <div style="color:black" class="container text-center">
+            &copy;<a  asp-area="" asp-controller="Home" asp-action="Privacy">2022 - Студио за Татуировки "Модерна"</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

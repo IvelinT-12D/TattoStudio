@@ -358,3 +358,13 @@ E:\VS Work\TattoStudioModerna origina\TattoStudioModerna\obj\Debug\net5.0\Razor\
 E:\VS Work\TattoStudioModerna origina\TattoStudioModerna\obj\Debug\net5.0\Razor\Views\Orders\Details.cshtml.g.cs
 E:\VS Work\TattoStudioModerna origina\TattoStudioModerna\obj\Debug\net5.0\Razor\Views\Orders\Edit.cshtml.g.cs
 E:\VS Work\TattoStudioModerna origina\TattoStudioModerna\obj\Debug\net5.0\Razor\Views\Orders\Index.cshtml.g.cs
+E:\VS Work\TattoStudioModerna origina\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\Index.cshtml.g.cs
+E:\VS Work\TattoStudioModerna origina\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
+E:\VS Work\TattoStudioModerna origina\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
+E:\VS Work\TattoStudioModerna origina\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\ChangePassword.cshtml.g.cs
+E:\VS Work\TattoStudioModerna origina\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\PersonalData.cshtml.g.cs
+E:\VS Work\TattoStudioModerna origina\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\TwoFactorAuthentication.cshtml.g.cs
+E:\VS Work\TattoStudioModerna origina\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ConfirmEmailChange.cshtml.g.cs
+E:\VS Work\TattoStudioModerna origina\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\Email.cshtml.g.cs
+E:\VS Work\TattoStudioModerna origina\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_StatusMessage.cshtml.g.cs
+E:\VS Work\TattoStudioModerna origina\TattoStudioModerna\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_Layout.cshtml.g.cs

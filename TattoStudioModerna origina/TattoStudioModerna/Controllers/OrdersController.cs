@@ -72,11 +72,12 @@ namespace TattoStudioModerna.Controllers
             ViewData["TattoId"] = new SelectList(_context.Tatto, "Id", "Name");
             return View();
         }
-
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,UserId,TattoId,OrderOn")] OrderVM order)
         {
+            
             if (!ModelState.IsValid)
             {
                 ViewData["TattoId"] = new SelectList(_context.Tatto, "Id", "Name", order.TattoId);
